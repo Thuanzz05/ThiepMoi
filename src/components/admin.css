@@ -1,0 +1,65 @@
+/* ===== Admin Full Page ===== */
+.adm-page{min-height:100vh;background:var(--bg);color:var(--ink);display:flex;flex-direction:column}
+
+.adm-page-header{position:sticky;top:0;z-index:10;background:color-mix(in srgb,var(--bg) 85%,transparent);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+.adm-page-header-in{max-width:640px;margin:0 auto;padding:16px 20px;display:flex;align-items:center;justify-content:space-between;gap:16px}
+.adm-page-header h1{margin:0;font:700 22px/1.3 var(--serif)}
+.adm-page-header p{margin:4px 0 0;font-size:13px;color:var(--soft)}
+
+.adm-page-body{flex:1;overflow-y:auto}
+.adm-page-content{max-width:640px;margin:0 auto;padding:0 0 24px}
+
+.adm-page-actions{position:sticky;bottom:0;z-index:10;background:color-mix(in srgb,var(--bg) 90%,transparent);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-top:1px solid var(--line)}
+.adm-page-actions-in{max-width:640px;margin:0 auto;padding:14px 20px;display:flex;gap:10px}
+.adm-page-actions-in .c-btn{flex:1}
+
+/* Accordion sections */
+.adm-section{border-bottom:1px solid var(--line)}
+.adm-section-btn{display:flex;align-items:center;justify-content:space-between;width:100%;padding:14px 20px;background:none;border:0;cursor:pointer;font:600 15px/1.4 'Be Vietnam Pro',sans-serif;color:var(--ink);text-align:left;transition:background .15s}
+.adm-section-btn:hover{background:var(--tint)}
+.adm-section-btn svg{transition:transform .2s;flex:none;width:16px;height:16px;stroke:var(--soft)}
+.adm-section-btn.is-open svg{transform:rotate(180deg)}
+.adm-section-body{padding:0 20px 18px;display:none}
+.adm-section-body.is-open{display:block}
+
+/* Form elements inside admin */
+.adm-field{margin-bottom:14px}
+.adm-field label{display:block;margin-bottom:5px;font-size:13px;font-weight:600;color:var(--soft);letter-spacing:.04em}
+.adm-field input[type="text"],
+.adm-field input[type="url"],
+.adm-field input[type="datetime-local"],
+.adm-field textarea{width:100%;padding:10px 13px;border-radius:12px;border:1px solid var(--line);background:var(--sf);color:var(--ink);outline:none;font-size:14px;transition:border-color .15s,box-shadow .15s}
+.adm-field input:focus,
+.adm-field textarea:focus{border-color:var(--ac);box-shadow:0 0 0 3px var(--tint)}
+.adm-field textarea{resize:vertical;min-height:60px}
+
+/* Color picker row */
+.adm-color{display:flex;align-items:center;gap:10px;margin-bottom:12px}
+.adm-color label{flex:none;width:90px;font-size:13px;font-weight:600;color:var(--soft)}
+.adm-color input[type="color"]{width:40px;height:34px;border:1px solid var(--line);border-radius:8px;background:var(--sf);cursor:pointer;padding:2px}
+.adm-color input[type="text"]{flex:1;padding:8px 12px;border-radius:10px;border:1px solid var(--line);background:var(--sf);color:var(--ink);font-size:13px;font-family:monospace;outline:none}
+.adm-color input[type="text"]:focus{border-color:var(--ac);box-shadow:0 0 0 3px var(--tint)}
+
+/* Dynamic list (agenda, additionalInfo) */
+.adm-list-item{display:flex;gap:8px;align-items:flex-start;margin-bottom:10px;padding:10px 12px;border-radius:12px;background:var(--sf);border:1px solid var(--line)}
+.adm-list-item .adm-list-fields{flex:1;display:grid;gap:6px}
+.adm-list-item input{width:100%;padding:8px 10px;border-radius:8px;border:1px solid var(--line);background:var(--bg);color:var(--ink);font-size:13px;outline:none}
+.adm-list-item input:focus{border-color:var(--ac)}
+.adm-list-remove{flex:none;width:30px;height:30px;border-radius:8px;border:1px solid var(--line);background:none;color:#e5484d;cursor:pointer;display:grid;place-items:center;margin-top:2px;transition:background .15s}
+.adm-list-remove:hover{background:rgba(229,72,77,.12)}
+.adm-list-add{display:inline-flex;align-items:center;gap:6px;padding:8px 14px;border-radius:10px;border:1px dashed var(--line);background:none;color:var(--ac);cursor:pointer;font-size:13px;font-weight:600;transition:background .15s,border-color .15s}
+.adm-list-add:hover{background:var(--tint);border-color:var(--ac)}
+
+/* Card image preview */
+.adm-preview{margin-top:8px;border-radius:12px;overflow:hidden;border:1px solid var(--line);background:var(--sf)}
+.adm-preview img{width:100%;height:auto;display:block}
+.adm-preview-empty{padding:24px;text-align:center;color:var(--soft);font-size:13px}
+
+/* Toast notification */
+.adm-toast{position:fixed;bottom:90px;left:50%;transform:translateX(-50%);z-index:110;padding:10px 20px;border-radius:999px;background:var(--ac);color:var(--bg);font-size:14px;font-weight:600;animation:adm-toast-in .3s ease both;pointer-events:none}
+@keyframes adm-toast-in{from{opacity:0;transform:translateX(-50%) translateY(10px)}to{opacity:1;transform:translateX(-50%) translateY(0)}}
+
+/* Mobile */
+@media(max-width:480px){
+  .adm-page-header-in{flex-direction:column;align-items:flex-start}
+}
