@@ -6,8 +6,7 @@ export default function Hero() {
     <header className="c-hero">
       <div className="c-hero-in">
         <div className="c-brand">
-          <img src={config.logo} alt="Logo GTISD" width="64" height="64" />
-          <p className="c-org">{config.organization.replace(', ', ',\n')}</p>
+          <img src={config.logo === "/logo.png" ? "/logo.png?v=2" : config.logo} alt="Logo GTISD" width="1800" height="100" />
         </div>
         <p className="c-eyebrow">{config.eyebrow}</p>
         <h1 className="c-title">{config.title}</h1>
