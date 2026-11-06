@@ -6,8 +6,8 @@ export default function AdditionalInfo() {
 
   return (
     <section className="c-sec reveal">
-      <p className="c-eyebrow">Lưu ý</p>
-      <h2 className="c-h2">Thông tin thêm</h2>
+      <p className="c-eyebrow">Mời bạn ghé thăm</p>
+      <h2 className="c-h2">Thông tin tham quan</h2>
       <dl className="c-info">
         {config.additionalInfo.map((info, index) => (
           <div key={index}>

@@ -4,27 +4,34 @@
 
 const eventConfig = {
   // --- Thông tin chung ---
-  title: 'Hội nghị Khách hàng 2026',
-  organization: 'Công ty Cổ phần ABC',
-  eyebrow: 'Trân trọng kính mời',
+  title: 'TUẦN LỄ KHAI TRƯƠNG',
+  organization: 'TRUNG TÂM GIAO DỊCH CÔNG NGHỆ XANH, ĐỔI MỚI SÁNG TẠO VÀ PHÁT TRIỂN BỀN VỮNG',
+  eyebrow: 'GTISD · CAFE CÔNG NGHỆ XANH',
+  logo: '/logo.png',
+  registrationUrl: 'https://docs.google.com/spreadsheets/d/11zPgNVqSPDpFl5gqXH5m_b3GHgPjqhmYeDxjYGaFwaM/edit?usp=sharing',
+  dateRange: '17/11 – 22/11/2026',
+  openingHours: '08:30 – 17:00 mỗi ngày',
 
   // --- Thời gian ---
-  date: '2026-11-19T18:30:00+07:00',
+  date: '2026-11-17T08:30:00+07:00',
+  endDate: '2026-11-22T17:00:00+07:00',
   dateDisplay: {
-    day: '19',
+    day: '17–22',
     month: '11',
     year: '2026',
-    weekday: 'Thứ Năm',
-    time: '18:30',
+    weekday: 'Tuần lễ khai trương',
+    time: '08:30 – 17:00',
   },
-  whenText: '18:30 · Thứ Năm 19/11/2026',
+  whenText: '08:30 – 17:00 · 17/11 – 22/11/2026',
 
   // --- Địa điểm ---
   venue: {
-    name: 'Trung tâm Hội nghị White Palace',
-    address: '194 Hoàng Văn Thụ, Phú Nhuận, TP.HCM',
-    fullAddress: 'Trung tâm Hội nghị White Palace, 194 Hoàng Văn Thụ, Phú Nhuận, TP.HCM',
-    mapQuery: 'Trung tâm Hội nghị White Palace, 194 Hoàng Văn Thụ, Phú Nhuận, TP.HCM',
+    name: 'GTISD Hub · Cafe Công nghệ xanh',
+    address: '40 P. Ngô Quyền, Cửa Nam, Hà Nội',
+    fullAddress: 'GTISD Hub, 40 P. Ngô Quyền, Cửa Nam, Hà Nội',
+    mapQuery: 'GTISD Hub, 40 P. Ngô Quyền, Cửa Nam, Hà Nội',
+    mapLink: 'https://maps.app.goo.gl/iEWEKS6vqFuUwSmn8',
+    embedUrl: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3346.008701406108!2d105.85162347476573!3d21.022553980625194!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135abece8d5218d%3A0xaa61796659aad162!2zNDAgUC4gTmfDtCBRdXnhu4FuLCBD4butYSBOYW0sIEjDoCBO4buZaSwgVmnhu4d0IE5hbQ!5e1!3m2!1svi!2s!4v1793938357515!5m2!1svi!2s',
   },
 
   // --- Phong bì ---
@@ -37,39 +44,42 @@ const eventConfig = {
 
   // --- Lời nhắn ---
   message: {
-    quote: 'Sự hiện diện của Quý vị là niềm vinh hạnh của chúng tôi.',
-    signBy: 'Ban tổ chức',
+    quote: 'GTISD kiến tạo giá trị trong hệ sinh thái phát triển bền vững, sáng tạo và thúc đẩy các giải pháp phát triển bền vững trong mọi lĩnh vực kinh tế, môi trường và xã hội. GTISD Hub là nơi tổ chức các sự kiện, hội thảo, trưng bày các sản phẩm, ươm mầm, hỗ trợ hoạt động xúc tiến thương mại và đầu tư, khoa học công nghệ và chuyển giao, giao dịch tài chính xanh và bền vững.',
+    signBy: 'Giới thiệu GTISD',
   },
 
   // --- Lịch trình ---
   agenda: [
-    { title: 'Đón khách' },
-    { title: 'Khai mạc' },
+    { title: 'Triển lãm sản phẩm công nghệ xanh' },
+    { title: 'Không gian độc đáo và tương tác' },
+    { title: 'Khám phá đột phá ngành công nghệ xanh' },
+    { title: 'Học hỏi và hợp tác' },
+    { title: 'Ưu đãi ra mắt' },
   ],
 
   // --- Thông tin thêm ---
   additionalInfo: [
-    { label: 'Trang phục', value: 'Lịch sự' },
+    { label: 'Tham quan', value: 'Tự do trong tuần lễ khai trương' },
   ],
 
   // --- Lời cảm ơn ---
   thanks: {
-    text: 'Rất hân hạnh được đón tiếp!',
-    subText: 'Cảm ơn bạn',
-    signBy: 'Ban tổ chức',
+    text: 'Hân hạnh chào đón Quý khách!',
+    subText: 'Cùng khám phá những giải pháp cho tương lai bền vững.',
+    signBy: 'GTISD Hub',
   },
 
   // --- Theme (màu sắc) ---
   theme: {
-    bg: '#0f1a2e',
-    sf: '#18263f',
+    bg: '#146c70',
+    sf: '#146c70',
     ink: '#ffffff',
-    soft: '#b6c3dc',
-    ac: '#5fb2ff',
+    soft: '#ffffff',
+    ac: '#ffffff',
   },
 
   // --- Ảnh thiệp ---
-  cardImage: 'https://api-event.tickmi.com/api/v1/invite-cards/vwvxydp/img/og?v=637',
+  cardImage: '/cafe.png',
 };
 
 export default eventConfig;

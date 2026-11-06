@@ -8,9 +8,9 @@ import Message from './components/Message';
 import EventDetails from './components/EventDetails';
 import Agenda from './components/Agenda';
 import AdditionalInfo from './components/AdditionalInfo';
-import RSVPForm from './components/RSVPForm';
+import RegistrationLink from './components/RegistrationLink';
+import Partners from './components/Partners';
 import ThankYou from './components/ThankYou';
-import Footer from './components/Footer';
 import BottomDock from './components/BottomDock';
 import AdminPage from './components/AdminPage';
 import useScrollReveal from './hooks/useScrollReveal';
@@ -35,10 +35,10 @@ function InvitationPage() {
           <EventDetails />
           <Agenda />
           <AdditionalInfo />
-          <RSVPForm />
+          <RegistrationLink />
           <ThankYou />
+          <Partners />
         </main>
-        <Footer />
       </div>
       <BottomDock />
     </>

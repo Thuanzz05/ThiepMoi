@@ -5,18 +5,15 @@ export default function Hero() {
   return (
     <header className="c-hero">
       <div className="c-hero-in">
-        <p className="c-org">{config.organization}</p>
+        <div className="c-brand">
+          <img src={config.logo} alt="Logo GTISD" width="64" height="64" />
+          <p className="c-org">{config.organization.replace(', ', ',\n')}</p>
+        </div>
         <p className="c-eyebrow">{config.eyebrow}</p>
         <h1 className="c-title">{config.title}</h1>
-        <p className="c-date">
-          <span>{config.dateDisplay.day}</span>
-          <i></i>
-          <span>{config.dateDisplay.month}</span>
-          <i></i>
-          <span>{config.dateDisplay.year}</span>
-        </p>
-        <p className="c-time">{config.dateDisplay.time} · {config.dateDisplay.weekday}</p>
-        <p className="c-place">{config.venue.name}</p>
+        <p className="c-date">{config.dateRange}</p>
+        <p className="c-time">{config.openingHours}</p>
+        <p className="c-place">{config.venue.name}<br />{config.venue.address}</p>
       </div>
       <a className="c-scroll" href="#noi-dung" aria-label="Xem thiệp">
         <svg viewBox="0 0 24 24" aria-hidden="true">

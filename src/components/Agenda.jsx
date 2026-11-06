@@ -4,8 +4,8 @@ export default function Agenda() {
   const { config } = useConfig();
   return (
     <section className="c-sec reveal">
-      <p className="c-eyebrow">Chương trình</p>
-      <h2 className="c-h2">Lịch trình</h2>
+      <p className="c-eyebrow">Khám phá GTISD Hub</p>
+      <h2 className="c-h2">Trải nghiệm tại đây</h2>
       <ol className="c-agenda">
         {config.agenda.map((item, index) => (
           <li key={index}>

@@ -1,6 +1,8 @@
 import { useState, useEffect } from 'react';
+import { useConfig } from '../context/EventConfigContext';
 
 export default function BottomDock() {
+  const { config } = useConfig();
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
@@ -19,11 +21,11 @@ export default function BottomDock() {
 
   return (
     <nav className={`c-dock${isVisible ? ' is-on' : ''}`} aria-label="Lối tắt">
-      <a href="#xac-nhan">
+      <a href={config.registrationUrl} target="_blank" rel="noopener noreferrer">
         <svg viewBox="0 0 24 24" aria-hidden="true">
           <path d="m5 12.5 4.5 4.5L19 7.5" />
         </svg>
-        <span>Trả lời</span>
+        <span>Đăng ký</span>
       </a>
       <a href="#dia-diem">
         <svg viewBox="0 0 24 24" aria-hidden="true">

@@ -38,6 +38,16 @@ function loadConfig() {
     const saved = localStorage.getItem(STORAGE_KEY);
     if (saved) {
       const overrides = JSON.parse(saved);
+      const oldAddress = overrides.venue?.address?.toUpperCase() || '';
+      if (
+        overrides.venue?.name === 'Trung tâm Hội nghị White Palace' ||
+        oldAddress.includes('PHƯỜNG CỦA NAM') ||
+        (!overrides.registrationUrl && overrides.title === 'GTISD - CAFE CÔNG NGHỆ XANH')
+      ) {
+        const migrated = deepMerge(overrides, defaultConfig);
+        localStorage.setItem(STORAGE_KEY, JSON.stringify(migrated));
+        return migrated;
+      }
       return deepMerge(defaultConfig, overrides);
     }
   } catch (e) { /* ignore */ }
