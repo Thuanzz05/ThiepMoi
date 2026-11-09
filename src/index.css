@@ -89,7 +89,7 @@ body:has(.c-page)::before{background:repeating-linear-gradient(135deg,transparen
 .c-partner-grid{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:8px}
 .c-partner-logo{position:relative;min-width:0;width:100%;aspect-ratio:1;overflow:hidden;border-radius:4px;background:#fff;box-shadow:0 4px 12px rgba(0,0,0,.12)}
 .c-partner-logo img{position:absolute;inset:6px;width:calc(100% - 12px);height:calc(100% - 12px);object-fit:contain}
-@media(max-width:480px){.c-partner-group{margin-top:20px}.c-partner-title{font-size:15px}.c-partner-grid{grid-template-columns:repeat(3,minmax(0,1fr));gap:8px}}
+@media(max-width:480px){.c-partner-group{margin-top:20px}.c-partner-title{font-size:15px}.c-partner-grid{display:flex;flex-wrap:wrap;justify-content:center;gap:8px}.c-partner-logo{flex:0 0 calc((100% - 16px)/3);width:auto}}
 
 /* ---- Form ---- */
 .c-form{display:grid;gap:16px;margin-top:20px;text-align:left}
